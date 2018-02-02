@@ -16,8 +16,10 @@ class Algorithm
 		end
 	end
 
-	def player_turns
-		
+	def player_turns(name)
+		puts "\n#{name}, please take your turn."
+		choice = gets.chomp 
+
 	end
 
 end

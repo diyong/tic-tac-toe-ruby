@@ -10,7 +10,7 @@ class Board
 		if @grid == nil
 			return @board_setup
 		else
-			return @board_setup = Array.new(@grid) { Array.new(@grid, default = "*") }
+			return @board_setup = Array.new(@grid) { Array.new(@grid) }
 		end
 	end
 

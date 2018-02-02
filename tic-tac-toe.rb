@@ -65,7 +65,7 @@ while pass == false
 end
 
 visual = Visuals.new(grid)
-visual.graphics
+visual = visual.graphics.each { |x| p x }
 
 case no_of_players
 when 1
