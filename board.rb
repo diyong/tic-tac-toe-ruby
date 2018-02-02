@@ -14,8 +14,4 @@ class Board
 		end
 	end
 
-	def mark_up
-
-	end
-
 end

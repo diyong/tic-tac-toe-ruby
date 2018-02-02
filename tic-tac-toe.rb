@@ -2,12 +2,15 @@ require "./player"
 require "./board"
 require "./visuals"
 require "./algorithm"
+require "./tttmodule.rb"
+include Tools
 
 player1 = ""
 player2 = ""
 no_of_players = ""
 grid_dimension = ""
 grid = ""
+coin_result = ""
 
 puts "Welcome to Tic-Tac-Toe: 'How Do I Do This?' Edition!"
 
@@ -38,6 +41,14 @@ while pass == false
 	end
 end
 
+puts "\nNow for the coin toss. Heads: Player 1 is first. Tails: Player 2 begins."
+coin_result = coin_toss
+if coin_result == 0
+	puts "\nHeads! \"#{player1.name}\" begins."
+elsif coin_result == 1
+	puts "\nTails! \"#{player2.name}\" begins."
+end
+
 puts "\nPlease press the \"Enter\" key to begin."
 
 pass = false
@@ -49,12 +60,14 @@ while pass == false
 end
 
 visual = Visuals.new(grid)
-visual.graphics
+visual.graphics.each { |x| p x}
 
-case no_of_players
-when 1
-	#1 player code
-when 2
-	#2 player code
+#game = Algorithm.new
+if coin_result == 0
+	#game.player_turn(player1.name)
+elsif coin_result == 1
+	#game.player_turn(player2.name)
 end
+
+
 

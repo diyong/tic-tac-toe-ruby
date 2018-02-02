@@ -16,7 +16,11 @@ class Visuals
 				end
 			end
 		end
-		return vis_rep.map {|x| p x}
+		return vis_rep
+	end
+
+	def new_graphics
+		self.each {|x| x + 1}
 	end
 
 end

@@ -7,6 +7,4 @@ class Player
 		@symbol = symbol
 	end
 
-	def turns
-	end
 end
