@@ -1,7 +1,11 @@
 class Algorithm
-	def initialize(); end
 
-	def self.one_player
+	def initialize(name) 
+		@name = name
+		@turn = true
+	end
+
+	def one_player
 		finish = false
 		while finish == false
 
@@ -9,17 +13,20 @@ class Algorithm
 
 			if start == 0
 				puts "Player 1 starts!"
+
 			else
-				puts "Computer starts!"
+				puts "Player 2 starts!"
+				@turn = false
 			end
 
 		end
 	end
 
-	def player_turns(name)
-		puts "\n#{name}, please take your turn."
-		choice = gets.chomp 
-
+	def player_turn_first(name)
+		if @turn == true
+			puts "\n#{@name}, please take your turn. Input the number corresponding to the cell you wish to select."
+			choice = gets.chomp.to_i
+		end
 	end
 
 end
