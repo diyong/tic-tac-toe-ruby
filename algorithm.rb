@@ -135,6 +135,8 @@ class Algorithm
 				else
 					@@cell_full = false
 				end
+			else 
+				puts "Incorrect input. Please enter a value between 1 and 9 that hasn't taken."
 			end
 		when 4
 			#code
